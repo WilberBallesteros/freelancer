@@ -1,0 +1,22 @@
+/*custom properties o variables en css*/
+:root {  /*pseudoelementos los q tienen :  */
+    --blanco: #FFF;
+    --oscuro: #212121;
+    --primario: #FFC107;
+    --secunddario: #0097A7;
+    --gris: #757575;
+}
+html {
+    font-size: 62.5%; /*1 rem = 10px*/
+}
+body {
+    font-size: 16px; /*1 rem = 10px*/
+    font-family: 'Krub', sans-serif;
+}
+.titulo {
+    text-align: center;
+    font-size: 3.8rem;
+}
+.titulo span {
+    font-size: 2rem;
+}
