@@ -20,3 +20,16 @@ body {
 .titulo span {
     font-size: 2rem;
 }
+.contenedor {
+    width: 120rem;
+    margin: 0 auto;
+}
+.nav-bg {
+    background-color: var(--secunddario);
+}
+
+.navegacion-principal a {
+    color: var(--blanco);
+    text-decoration: none;
+    
+}
