@@ -6,24 +6,66 @@
     --secunddario: #0097A7;
     --gris: #757575;
 }
+
+/**Globales**/
+
 html {
     font-size: 62.5%; /*1 rem = 10px*/
+    box-sizing: border-box; /*hack box model*/
 }
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+
 body {
     font-size: 16px; /*1 rem = 10px*/
     font-family: 'Krub', sans-serif;
-}
-.titulo {
-    text-align: center;
-    font-size: 3.8rem;
-}
-.titulo span {
-    font-size: 2rem;
 }
 .contenedor {
     max-width: 120rem;
     margin: 0 auto;
 }
+.boton {
+    background-color: var(--secunddario);
+    color: var(--blanco);
+    text-decoration: none;
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+}
+@media (min-width: 768px) {
+    .boton {
+        width: auto; /*lo resetea de los 90% y lo deja a la medida q pusimos inicialmnte*/
+    }
+}
+
+/**Tipografia**/
+
+h1 {
+    font-size: 3.8rem;
+}
+h2 {
+    font-size: 2.8rem;
+}
+h3 {
+    font-size: 1.8rem;
+}
+h1,h2,h3 {
+    text-align: center;
+}
+/**Titulos**/
+
+.titulo span {
+    font-size: 2rem;
+}
+
+/**Navegacion Principal**/
+
 .nav-bg {
     background-color: var(--secunddario);
 }
@@ -51,7 +93,34 @@ body {
     color: var(--oscuro);
 }
 
-@media (min-width: 768px) {
+/**Hero**/
 
+.hero {
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; /*llene todo el tamaño disponible*/
+    height: 450px;
+    /*filter: brightness(0.4 ); /* esta propiedad va del 0 al 1, siento 0 completamente negro y 1 totalmente transparente*/
+    position: relative;
 }
+.contenido-hero {
+    position: absolute; /*poner un cuadro en toda la imagen de fondo y oscurecerlo un poco*/
+    /*background-color: rgba(0, 0, 0, .7); /*Anterior*/
+    background-color: rgb(0 0 0 / 70%);
+    width: 100%;
+    height: 100%;
 
+    /*alinear cvertical y horizontalmente*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contenido-hero h2,
+.contenido-hero p {
+    color: var(--blanco);
+}
+.contenido-hero  .ubicacion {
+    display: flex;
+    align-items: flex-end;
+}
